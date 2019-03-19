@@ -1,2 +1,16 @@
-# Robotic-Motion-Planning-A-RRT-and-RRT-Search
-Hello
+# Robotic-Motion-Planning-A-Star-RRT-and-RRT-Star-Search
+## Introduction
+<br>Motion planning is a term used in robotics for the process of breaking down the desired movement task into discrete motions that satisfy movement constraints and possibly optimize some aspect of the movement. In this project, I implemented A star, RRT and RRT star method for a motion planning task. I assigned the start point and end point and these method will find a optimal planning.
+## A Star
+![wechatimg2](https://user-images.githubusercontent.com/36937088/49906360-69ada480-fe26-11e8-8324-faa5883fd5e7.jpeg)
+<br>We built a neural network based on ResNet on our own. The input image size we set is 256 * 256. This neural network had three layers; each layer has 5 blocks. For every block, we use two convolution layer to extract feature and add the result with the input. We also added average pooling between every block. Finally, after average pooling, we use a fully connected layer to get the result. We compared the different combination of kernel size, stride and the number of kernels and chose the optimal one. We have marked it in the figure above. After training, we used a confusion matrix to check the accuracy for each class. 
+## RRT
+<br>We employed "color constancy" and "data augmentation" methods to pre-process our data set. At the training process, we selected Adam as descent optimization algorithms. Meanwhile, in order to avoid accuracy issue caused by the imbalance data, we selected classed weighted cross entropy loss function.
+## RRT Star
+![color](https://user-images.githubusercontent.com/36937088/49682114-2d172d00-fa63-11e8-9b14-ab2e057c4aa9.jpg)
+<br>To eliminate the variance of luminance and color, we read the paper[10] and designed color constancy algorithms to normalize original images. According to the plot, we can conclude that this algorithm successfully reduces the impact of different color.
+## Result
+![merge_from_ofoct 3](https://user-images.githubusercontent.com/36937088/49682119-55069080-fa63-11e8-92bc-5e50620660f0.jpg)
+<br>As is known to all, a larger dataset will give more accurate results than the smaller ones. As for the dataset we used to train our neural networks, the number of images in each category was extremely imbalanced. Here, we applied 3 methods, which included flipping, randomly cropping and adding noise. After data augmentation, the biggest ratio between different classes is still around 6 to 1. So we also used "label shuffling" method. The basic idea is enlarging the data set by randomly selected samples multiple times from the same class. As a result, each class could have the same number of samples with the category with the largest number of samples.
+## Comparison
+<br>According to the table, we can find that, in general, ResNet-V3 achieved good results in different situations. Our CXNet merely achieved MCA 65.78\%. However, we need to point out that these three networks only achieved high accuracy for the 'NV' class, which has the largest number of samples, but did a poor job on others. Our CXNet has balanced accuracy on all classes. Moreover, color constancy method improves the accuracy 2\%. Data augmentation method also has a good performance, which increases the accuracy 3\%. According to the result, data augmentation is a useful tool to avoid over-fitting.
