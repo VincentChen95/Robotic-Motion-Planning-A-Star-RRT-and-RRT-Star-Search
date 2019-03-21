@@ -17,9 +17,12 @@
 <br>The algorithm in pseudocode is as follows:  
 ![rrtstar](https://user-images.githubusercontent.com/36937088/54732460-21063580-4b51-11e9-8698-0dd5ce3d9d2e.jpeg)
 ## Result
-<br> I chose the same map and select the optimal parameter for each algorithm for comparasion. The results is as follows:  
+<br> I chose the same map and select the optimal parameter for each algorithm for comparasion.
+<br> The RRT results is as follows:    
   ![rrt_p2_step](https://user-images.githubusercontent.com/36937088/54732264-1a2af300-4b50-11e9-880f-431efe67a404.jpeg)
+<br> The RRT* results is as follows:   
   ![rrtstart_p2_step](https://user-images.githubusercontent.com/36937088/54732274-2adb6900-4b50-11e9-9965-e32cf2f9e807.jpeg)  
+<br> The A* results is as follows:   
   ![a_map2_ep=1](https://user-images.githubusercontent.com/36937088/54732282-329b0d80-4b50-11e9-8962-d5ad310c9244.jpeg)
 ## Comparison
 <br>To do
