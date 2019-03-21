@@ -5,18 +5,21 @@
 <br>Input: A* is a graph search algorithms, which take a “graph” as input. A graph is a set of locations (“nodes”) and the connections (“edges”) between them. A* selects the path that minimizes f(n)=g(n)+h(n) where n is the next node on the path, g(n) is the cost of the path from the start node to n, and h(n) is a heuristic function that estimates the cost of the cheapest path from n to the goal.
 <br> So if we change the weight of heuristic function, the result of A* will change.
 <br>The algorithm in pseudocode is as follows:
-![astar](https://user-images.githubusercontent.com/36937088/54732154-7a6d6500-4b4f-11e9-8f36-67a9ccfa64d0.jpeg)
+<div align=center>![astar](https://user-images.githubusercontent.com/36937088/54732154-7a6d6500-4b4f-11e9-8f36-67a9ccfa64d0.jpeg)
 ## RRT
 <br> A major feature of the RRT algorithm is the random search of space. Such search brings great advantages especially to path planning in high-dimensional space, but such search leads to low computational efficiency of the algorithm. The random tree search generates random points throughout the metric space until the node just extends to the vicinity of the target to end the search and generate the final path.
 <br>The algorithm in pseudocode is as follows:  
-![rrt](https://user-images.githubusercontent.com/36937088/54732732-8eff2c80-4b52-11e9-87a2-7459d19c383e.jpeg)
+<div align=center>![rrt](https://user-images.githubusercontent.com/36937088/54732732-8eff2c80-4b52-11e9-87a2-7459d19c383e.jpeg)
 ## RRT Star
 <br>Although the RRT algorithm is a relatively efficient one, the RRT algorithm does not guarantee that the resulting planning path is relatively optimized. The main feature of the RRT* algorithm is that it can quickly find the initial path, and then continue to optimize as the sampling point increases until the target point is found or the set maximum number of cycles is reached. The difference between the RRT* algorithm and the RRT algorithm lies in the two recalculation processes for the new node x_new, which are:
 <br>1. The process of re-selecting the parent node for x_new
 <br>2. The process of rerouting a random tree
 <br>The algorithm in pseudocode is as follows:  
-![rrtstar](https://user-images.githubusercontent.com/36937088/54732460-21063580-4b51-11e9-8698-0dd5ce3d9d2e.jpeg)
+<div align=center>![rrtstar](https://user-images.githubusercontent.com/36937088/54732460-21063580-4b51-11e9-8698-0dd5ce3d9d2e.jpeg)
 ## Result
-<br>To do
+<br> I chose the same map and select the optimal parameter for each algorithm for comparasion. The results is as follows:  
+  ![rrt_p2_step](https://user-images.githubusercontent.com/36937088/54732264-1a2af300-4b50-11e9-880f-431efe67a404.jpeg)
+  ![rrtstart_p2_step](https://user-images.githubusercontent.com/36937088/54732274-2adb6900-4b50-11e9-9965-e32cf2f9e807.jpeg)  
+  ![a_map2_ep=1](https://user-images.githubusercontent.com/36937088/54732282-329b0d80-4b50-11e9-8962-d5ad310c9244.jpeg)
 ## Comparison
 <br>To do
