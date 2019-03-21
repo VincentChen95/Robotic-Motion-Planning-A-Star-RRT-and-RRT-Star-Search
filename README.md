@@ -10,8 +10,8 @@
 <br>To do
 ## RRT Star
 <br>Although the RRT algorithm is a relatively efficient one, the RRT algorithm does not guarantee that the resulting planning path is relatively optimized. The main feature of the RRT* algorithm is that it can quickly find the initial path, and then continue to optimize as the sampling point increases until the target point is found or the set maximum number of cycles is reached. The difference between the RRT* algorithm and the RRT algorithm lies in the two recalculation processes for the new node x_new, which are:
-<br>The process of re-selecting the parent node for x_new
-<br>The process of rerouting a random tree
+<br>1. The process of re-selecting the parent node for x_new
+<br>2. The process of rerouting a random tree
 <br>The algorithm in pseudocode is as follows:  
 ![rrtstar](https://user-images.githubusercontent.com/36937088/54732460-21063580-4b51-11e9-8698-0dd5ce3d9d2e.jpeg)
 ## Result
