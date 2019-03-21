@@ -9,7 +9,7 @@
 ## RRT
 <br>To do
 ## RRT Star
-<br>The algorithm in pseudocode is as follows:
+<br>The algorithm in pseudocode is as follows:\\
 ![rrtstar](https://user-images.githubusercontent.com/36937088/54732460-21063580-4b51-11e9-8698-0dd5ce3d9d2e.jpeg)
 ## Result
 <br>To do
