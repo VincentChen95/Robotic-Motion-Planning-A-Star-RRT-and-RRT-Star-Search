@@ -18,11 +18,11 @@
 ![rrtstar](https://user-images.githubusercontent.com/36937088/54732460-21063580-4b51-11e9-8698-0dd5ce3d9d2e.jpeg)
 ## Result
 <br> I chose the same map and select the optimal parameter for each algorithm for comparasion.
-<br> The RRT results is as follows:    
+<br> The RRT* results is as follows:    
   ![rrt_p2_step](https://user-images.githubusercontent.com/36937088/54732264-1a2af300-4b50-11e9-880f-431efe67a404.jpeg)
-<br> The RRT* results is as follows:   
+<br> The RRT results is as follows:   
   ![rrtstart_p2_step](https://user-images.githubusercontent.com/36937088/54732274-2adb6900-4b50-11e9-9965-e32cf2f9e807.jpeg)  
 <br> The A* results is as follows:   
   ![a_map2_ep=1](https://user-images.githubusercontent.com/36937088/54732282-329b0d80-4b50-11e9-8962-d5ad310c9244.jpeg)
 ## Comparison
-<br>To do
+Firstly, for A* method, it designs a cost function. I set the weight for the heuristic function is 1. I set the step size for A is 1 and it can move eight directions. The result for A is quite acceptable because of it almost straight. For RRT and RRT*, I design there are 5 percents possibility to select the goal point so that these two algorithms can run faster. Moreover, RRT* can re-select father node and re-wire for x_new, which cause the cost is lower than RRT.
